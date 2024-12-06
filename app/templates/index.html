@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Dynamic Site</title>
+</head>
+<body>
+    <h1>Dynamic Site with Enhanced Features</h1>
+    <form action="/send-mail" method="POST">
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <textarea name="message" placeholder="Your message"></textarea>
+        <button type="submit">Send Email</button>
+    </form>
+    <form action="/upload-excel" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload Excel</button>
+    </form>
+    <form action="/extract-pdf" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Extract PDF to Excel</button>
+    </form>
+    <a href="/export-csv"><button>Export CSV</button></a>
+    <a href="/export-pdf"><button>Export PDF</button></a>
+</body>
+</html>
